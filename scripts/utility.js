@@ -14,6 +14,12 @@ let buttons = document.querySelectorAll('.myButton');
     applyDiscount()
   });
 
+  let nextBtn = document.getElementById('nextBtn')
+  nextBtn.addEventListener('click', function() {
+     
+    nextButton()
+  });
+
 
   function colorChangetoGreen(buttonId) {
     let btn = document.getElementById(buttonId);
@@ -91,4 +97,13 @@ function seatCount(){
     }else {
         alert("Enter valid cuppon");
     }
+  }
+
+  function nextButton(){
+    
+    let mainsite = document.getElementById('mainSite');
+    let modalsite = document.getElementById('modal');
+    mainsite.classList.add("hidden");
+    modalsite.classList.remove("hidden");
+
   }
