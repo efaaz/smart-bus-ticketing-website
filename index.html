@@ -124,7 +124,7 @@
                             <div> 
                                 <button class="btn text-btnfontcolor bg-btnbg font-medium text-base font-inter">
                                     <img src="images/seat-green.png" alt="" srcset="">
-                                    <span>40</span> Seats left</button>
+                                    <span id="seatsLeft">40</span> Seats left</button>
                             </div>
                         </div>
                         <div class="rounded-3xl bg-[#F7F8F8] mt-4">
@@ -176,20 +176,20 @@
                     </button>
                     <div class="flex gap-6 items-center mb-6">
                         <p class="text-[#03071280]">A</p>
-                        <button id="A1" onclick="btnClicked()" class="btn bg-[#F7F8F8] border-none py-3 px-12 w-28 text-[#03071280]">A1</button>
-                        <button id="A2" class="btn bg-[#F7F8F8] border-none py-3 px-12 w-28 text-[#03071280]">A2</button>
+                        <button id="A1"  class="myButton btn bg-[#F7F8F8] border-none py-3 px-12 w-28 text-[#03071280]">A1</button>
+                        <button id="A2" class="btn myButton bg-[#F7F8F8] border-none py-3 px-12 w-28 text-[#03071280]">A2</button>
                         <div class="ml-8 flex gap-6">
-                            <button id="A3" class="btn bg-[#F7F8F8] border-none py-3 w-28 px-12 text-[#03071280]">A3</button>
-                            <button id="A4" class="btn bg-[#F7F8F8] border-none py-3 w-28 px-12 text-[#03071280]">A4</button> 
+                            <button id="A3" class="btn myButton bg-[#F7F8F8] border-none py-3 w-28 px-12 text-[#03071280]">A3</button>
+                            <button id="A4" class="btn myButton bg-[#F7F8F8] border-none py-3 w-28 px-12 text-[#03071280]">A4</button> 
                         </div>
                     </div>
                     <div class="flex gap-6 items-center mb-6">
                         <p class="text-[#03071280]">B</p>
-                        <button class="btn bg-[#F7F8F8] border-none py-3 w-28 px-12 text-[#03071280]">B1</button>
-                        <button class="btn bg-[#F7F8F8] border-none py-3 w-28 px-12 text-[#03071280]">B2</button>
+                        <button id="B1" class="btn myButton bg-[#F7F8F8] border-none py-3 w-28 px-12 text-[#03071280]">B1</button>
+                        <button id="B2" class="btn myButton bg-[#F7F8F8] border-none py-3 w-28 px-12 text-[#03071280]">B2</button>
                         <div class="ml-8 flex gap-6">
-                            <button class="btn bg-[#F7F8F8] border-none py-3 w-28 px-12 text-[#03071280]">B3</button>
-                            <button class="btn bg-[#F7F8F8] border-none py-3 w-28 px-12 text-[#03071280]">B4</button> 
+                            <button id="B3" class="btn myButton bg-[#F7F8F8] border-none py-3 w-28 px-12 text-[#03071280]">B3</button>
+                            <button id="B4" class="btn myButton bg-[#F7F8F8] border-none py-3 w-28 px-12 text-[#03071280]">B4</button> 
                         </div>
                     </div>
                     <div class="flex gap-6 items-center mb-6">
@@ -277,25 +277,24 @@
                             <p class="text-[#030712] font-inter text-base font-medium">Price</p>
                         </div>
                         <div class="border border-[#03071233] border-dashed w-[20.8rem] my-2"></div>
-                        <div class=" flex justify-between">
-                            <p class="text-[#03071299] font-inter text-base font-normal">A1</p>
-                            <p class="text-[#03071299] font-inter text-base font-normal">Economoy</p>
-                            <p class="text-[#03071299] font-inter text-base font-normal">550</p>
-                        </div>
+                        
+                            <div id="appendPosition">
+                                <!-- here is the position to dynamically append div sturcture -->
+                            </div>
                         <div class="border border-[#03071233] w-[20.8rem] my-2"></div>
                         <div class=" flex justify-between">
                             <p class="text-[#030712] font-inter text-base font-medium">Total Price</p>
-                            <p class="text-[#030712] font-inter text-base font-medium">BDT <span id="totalPrice">1000</span></p>
+                            <p class="text-[#030712] font-inter text-base font-medium">BDT <span id="totalPrice">0</span></p>
                         </div>
                         <div id="inputCuppon" class="my-2">
-                            <label class="input  flex items-center gap-3">
-                                <input type="text" class="grow" placeholder="Have any copupon?" />
-                                <button class="btn bg-btnfontcolor rounded-lg text-white  py-0">Apply</button>
+                            <label class="input  flex items-center gap-3" id="input-field">
+                                <input type="text" id="myInput" class="grow" placeholder="Have any copupon?" />
+                                <button id="applyCuppon" class="btn bg-btnfontcolor rounded-lg text-white  py-0">Apply</button>
                               </label>
                         </div>
                         <div class=" flex justify-between mb-4 mt-4">
                             <p class="text-[#030712] font-inter text-base font-medium">Grand Total</p>
-                            <p class="text-[#030712] font-inter text-base font-medium">BDT <span id="grandPrice">1000</span></p>
+                            <p class="text-[#030712] font-inter text-base font-medium">BDT <span id="grandPrice">0</span></p>
                         </div>
                     </div>
                     <div class="form-section p-6">
@@ -368,5 +367,6 @@
     
 
     <script src="scripts/main.js"></script>
+    <script src="scripts/utility.js"></script>
 </body>
 </html>
